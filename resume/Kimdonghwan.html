@@ -1,0 +1,643 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>김동환</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="6751303e-2d6a-47be-b293-2ab556df2d01" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1515847049296-a281d6401047?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 41.559999999999995%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">👨🏻‍💻</span></div><h1 class="page-title">김동환</h1></header><div class="page-body"><div id="24630ac7-d5b7-4f7a-924b-7e3632f8dabe" class="column-list"><div id="232441c6-8a7f-4e33-838d-59c5201f1172" style="width:43.75%" class="column"><figure id="fc514dcb-5a8d-4648-b041-9b64c1b0d362" class="image"><a href="%E1%84%80%E1%85%B5%E1%86%B7%E1%84%83%E1%85%A9%E1%86%BC%E1%84%92%E1%85%AA%E1%86%AB%20fc514dcb5a8d4648b0419b64c1b0d362/1607611658955.jpg"><img style="width:240px" src="%E1%84%80%E1%85%B5%E1%86%B7%E1%84%83%E1%85%A9%E1%86%BC%E1%84%92%E1%85%AA%E1%86%AB%20fc514dcb5a8d4648b0419b64c1b0d362/1607611658955.jpg"/></a></figure><p id="bedfef36-98d7-4511-aa36-3fd39d16e6aa" class="">
+</p></div><div id="678efe6d-a9ca-43b0-8301-5c3fe645a4f0" style="width:56.25%" class="column"><h3 id="58e79b78-3f10-45f8-b203-0ae3757ace20" class="">&quot;안녕하세요!👋
+ 완벽을 추구하는 테스터, 김동환입니다.&quot;</h3><p id="9c1f5a49-97d5-449f-a89d-3908b7c4a3bc" class="">
+항상 긍정의 힘을 믿으며 묵묵히 앞으로 나아갑니다.
+테스터로서 이슈를 많이 찾기보단 이슈를 줄이고 싶습니다.
+침착하게 이슈를 분석하고 재현 경로를 찾아냅니다.
+협업을 위해 배려하며, 함께 성장하기 위해 노력합니다.</p><p id="c3cd34cf-03be-4431-9b5c-1e43d2f873b9" class="">📍<strong>Tag
+</strong><code>Software tester</code> <code>QA</code> <code>ISTQB</code> <code>Jira</code> <code>Mobile</code> <code>Web</code> <code>Python</code></p></div></div><h2 id="dff5b263-b1be-48a1-aa05-b972e33b5397" class="">About Me</h2><hr id="34432713-8d22-48e7-badc-6df40efc5c02"/><div id="cc40937c-9afe-4472-87a0-437cf76152ee" class="column-list"><div id="a76834d5-72c2-4b3b-8bda-58643c5f7441" style="width:50%" class="column"><h2 id="952d18c0-088d-4f28-a6f3-2d049e77fe7d" class="">👨🏻‍💻<strong>Career (</strong>총 <mark class="highlight-red">3</mark>년)</h2><p id="622e906d-23b5-44fa-aa73-ffb23de91428" class=""><code>2018.06~</code> <strong>하이퍼커넥트</strong></p><ul id="a8729e81-a67c-46d1-b5e5-dd43565261d5" class="bulleted-list"><li>Android &amp; iOS &amp; Web &amp; SDK 테스트</li></ul><ul id="105eb2f9-53d0-42f2-967e-6c400180579b" class="bulleted-list"><li>테스트 계획 및 테스트케이스 작성</li></ul><ul id="b6568ab8-17f4-4926-8a74-d86468082f76" class="bulleted-list"><li>테스트 진행 및 버그 리포팅 활동</li></ul><ul id="ed7d9fdb-b955-46a6-9a7e-1a15bec00571" class="bulleted-list"><li>이슈 추적 및 관리</li></ul><ul id="fff83528-d6f6-419e-bf4c-191bab62aff0" class="bulleted-list"><li>배포를 위한 릴리즈 테스트</li></ul><ul id="7011ede9-daec-421e-90ec-1d6d0b2e25fb" class="bulleted-list"><li>CS 이슈 재현 및 분석</li></ul><p id="af1da481-57ed-4357-baf4-206f11540197" class="">
+</p></div><div id="d41c342a-6d4d-4e3d-aeb3-70c024678f2c" style="width:50%" class="column"><h2 id="14e10d81-b73c-4139-a7a4-c1e5efb9b340" class="">📝 <strong>Used Tool &amp; Experience</strong></h2><p id="88fc5070-7ec1-4d8b-85f1-cbdd3221577b" class=""><strong>Tool</strong></p><p id="e1b26cd4-20e1-4646-923b-367959f1cc80" class=""><code>G Suite</code> <code>Jira</code> <code>Slack</code> <code>Notion</code> <code>ADB</code> <code>Selenium</code> <code>Charles Proxy</code> <code>VPN</code> <code>Postman</code> <code>Appium</code></p><p id="c5e8a78e-7368-46b9-bacb-82750d51939f" class="">
+</p><p id="638a20d4-3890-4b23-a0e8-e04a717e8ee2" class=""><strong>Work experience</strong></p><p id="1ab9c565-301a-4b0b-85da-f2d36fc146ad" class=""><code>Manual test</code> <code>UI test</code> <code>Black-box test</code> <code>API test</code> <code>Profiling</code> <code>RPA</code> <code>Waterfall</code> <code>Scrum</code></p><p id="7b3cf624-1ab8-4d4a-9ec3-baf0c2b33c79" class="">
+</p></div></div><div id="dda1c408-0fe3-41e7-bd79-13b0770677cd" class="column-list"><div id="07612d40-1929-41b8-9145-e8630e602603" style="width:50%" class="column"><h2 id="53e26e17-e446-412d-bba6-6f7576f0a945" class=""><strong>🎓 Education</strong></h2><p id="7c8b7928-0ee1-4dea-9148-a4930935dead" class=""><code>2018</code> 숭실대학교 산업정보시스템공학과 졸업</p><p id="e0cd692b-4616-4ff5-99af-d6a53438fc9a" class=""><code>2017</code> VR &amp; AR 게임 컨텐츠 전문가 교육 과정 수료</p><p id="fe61c002-7f8f-465b-8965-28fce5de48b9" class="">
+</p></div><div id="4ba59181-fd74-44f9-a591-c3683b8bd41f" style="width:50%" class="column"><h2 id="d723380f-abcf-4f65-970d-fffbd924f3df" class="">🧾Certificate</h2><p id="ba6611f6-47e1-414f-892e-5314e93dc842" class=""><code>2018</code> ISTQB (FL) 취득</p><p id="20b686ff-542b-40f2-999e-9f5ace1e2846" class=""><code>2015</code> 정보처리기능사 취득
+</p></div></div><p id="550893c3-3a09-4b60-9c87-61ac63cb38d2" class=""><strong>👇🏻어떤 업무를 했는지? 좀 더 자세히 알고 싶으신가요?</strong></p><figure id="5f97ce5e-5512-4cc8-af1c-a49ef97dc9c0" class="link-to-page"><a href="%E1%84%80%E1%85%B5%E1%86%B7%E1%84%83%E1%85%A9%E1%86%BC%E1%84%92%E1%85%AA%E1%86%AB%20fc514dcb5a8d4648b0419b64c1b0d362/%E1%84%8B%E1%85%A5%E1%86%B8%E1%84%86%E1%85%AE%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%205f97ce5e55124cc8af1ca49ef97dc9c0.html"><span class="icon">💁🏻‍♂️</span>업무 포트폴리오</a></figure><p id="3154c960-c496-4a2c-a704-eda23e74a3f7" class="">
+</p><hr id="bca57444-b6a3-4968-91e7-a919c63995f5"/><div id="60e9cfc6-dfd5-45eb-bc08-1cdf678674e7" class="column-list"><div id="4823b880-e7d2-4e68-812e-31a2aa2c0a19" style="width:50%" class="column"><h2 id="29c436cc-b243-400e-aa7a-fd78064b0958" class="">Favorite</h2><p id="f23b56f0-7492-45d5-a2a5-502f2008561b" class=""><strong>🎧음악 </strong>🍽️<strong>맛집 </strong>📺<strong>유튜브 </strong>🧳<strong>여행 </strong>🎮<strong>게임</strong></p></div><div id="88e9a948-6a3c-48e1-bd44-10a5b5849a53" style="width:50%" class="column"><h2 id="e943f3c9-e5dd-462e-b45d-1a07d2f02f60" class=""><strong>Contact</strong></h2><p id="91f5de1f-eea7-4eaa-8883-0dd33095abe0" class="">✉️<a href="mailto:k_dong129@naver.com">k_dong129@naver.com</a> 
+📞<a href="tel://+82-10-3224-1209">+82-10-3224-1209</a> 
+👔<a href="https://www.linkedin.com/in/sqakdh/?locale=ko_KR">LinkedIn</a></p></div></div><p id="05f251f3-77bb-4b68-af1d-e99fef0947ee" class="">
+</p></div></article></body></html>
